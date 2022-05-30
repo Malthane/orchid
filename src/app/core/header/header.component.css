@@ -207,9 +207,6 @@ nav .logo.space{
   color: red;
   padding: 0 5px 0 0;
 }
-.CoffeeImage {
-  width: 100%;
-}
 
 @media (max-width: 980px){
   nav .menu-icon,

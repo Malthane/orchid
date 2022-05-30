@@ -3,7 +3,7 @@
     <div class="screen__content">
       <form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="login__field">
-          <i class="login__icon fas fa-user"></i>
+          <fa-icon [icon]="faUser"></fa-icon>
           <input
             type="text"
             name="Email"
@@ -13,26 +13,32 @@
           />
         </div>
         <div class="login__field">
-          <i class="login__icon fas fa-lock"></i>
+          <fa-icon [icon]="faLock"></fa-icon>
           <input
-          type="password"
-          name="password"
-          class="login__input"
-          formControlName="password"
-          placeholder="Password" />
+            type="password"
+            name="password"
+            class="login__input"
+            formControlName="password"
+            placeholder="Password"
+          />
         </div>
         <button class="button login__submit" type="submit" (click)="onLogin()">
           <span class="button__text">Log In Now</span>
-          <i class="button__icon fas fa-chevron-right"></i>
+          <fa-icon class="chevronRight" [icon]="faChevronCircleRight"></fa-icon>
         </button>
-        <a class="router_navigation_login" routerLink="/sign-ui"> New User? Please Register</a>
+        <a class="router_navigation_login" routerLink="/sign-ui">
+          New User? Please Register</a
+        >
       </form>
       <div class="social-login">
         <h3>log in via</h3>
         <div class="social-icons">
-          <a href="#" class="social-login__icon fab fa-instagram"></a>
+          <!-- <a href="#" class="social-login__icon fab fa-instagram"></a>
           <a href="#" class="social-login__icon fab fa-facebook"></a>
-          <a href="#" class="social-login__icon fab fa-twitter"></a>
+          <a href="#" class="social-login__icon fab fa-twitter"></a> -->
+          <fa-icon [icon]="faInstagram"></fa-icon>
+          <fa-icon class="facebookIcon" [icon]="faFacebook"></fa-icon>
+          <fa-icon [icon]="faTwitter"></fa-icon>
         </div>
       </div>
     </div>
